@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Leejoshuak</title>
+    <title>Joshua Lee</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,31 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Joshua Lee</h3>
+              <nav class="nav nav-masthead">
+                <a class="nav-link <%= 'active' if controller_name == 'home' %>" href="/">Home</a>
+                <a class="nav-link <%= 'active' if controller_name == 'projects' %>" href="/projects">Projects</a>
+                <a class="nav-link <%= 'active' if controller_name == 'about' %>" href="/about">About</a>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <%= yield %>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>This is a footer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
